@@ -22,7 +22,7 @@ export class Array2 {
     const lastItem = this[lastIndex];
     delete this[lastIndex];
     this.length--;
-    return lastItem;
+    return lastItem.value;
   }
 
   find(cb) {
@@ -62,7 +62,7 @@ export class Array2 {
       }
     }
 
-    return Object.values(this);
+    return this;
   }
 
   __getItem(index) {
@@ -83,16 +83,23 @@ export class Array2 {
 }
 
 const arr = new Array2(12, 9, 7);
-arr.push(6);
-// console.log(arr.pop());
 console.log("array", arr);
-// console.log(arr.get(1));
+
+console.log(arr.get(1));
+
 console.log("sort", arr.sort());
+
 console.log(
   "find",
   arr.find((c) => c === 7),
 );
 console.log(
   "filter",
-  arr.filter((c) => [7, 9].includes(c)),
+  arr.filter((c) => [7, 9, 12].includes(c)),
 );
+console.log("before push", arr);
+arr.push(3);
+console.log("after push", arr);
+console.log("before pop", arr);
+arr.pop();
+console.log("after pop", arr);
