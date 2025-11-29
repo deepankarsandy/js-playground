@@ -1,3 +1,6 @@
+/*
+ * @see https://youtu.be/VoJKWYhfFIU
+ */
 export class Node {
   declare value: number;
   declare left: Node | null;

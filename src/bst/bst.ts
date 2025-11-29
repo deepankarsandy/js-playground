@@ -1,5 +1,8 @@
 import { Node } from "./node";
 
+/*
+ * @see https://youtu.be/VoJKWYhfFIU
+ */
 class BST {
   declare private root: Node | null;
 

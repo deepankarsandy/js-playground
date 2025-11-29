@@ -1,5 +1,8 @@
 import { ArrayItem } from "./ArrayItem";
 
+/*
+ * @see https://youtu.be/6EX6Qa3fLgE
+ */
 export class Array2 {
   constructor(...values) {
     this.length = 0;
